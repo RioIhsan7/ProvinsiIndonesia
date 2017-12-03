@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProvinsIndonesia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNv-zv-fhp">
+                                <rect key="frame" x="25" y="318" width="334" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QNv-zv-fhp" secondAttribute="height" multiplier="167:15" id="11l-MX-1gg"/>
+                                    <constraint firstAttribute="width" constant="334" id="Wxx-Jx-zfX"/>
+                                    <constraint firstAttribute="height" constant="30" id="lNq-cP-2fR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="PROVINSI INDONESIA">
+                                    <color key="titleColor" red="0.971046933" green="1" blue="0.99681129970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="W6e-3h-uCt" kind="show" id="spF-Fc-eVZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43044098980000001" green="0.43044098980000001" blue="0.43044098980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QNv-zv-fhp" secondAttribute="bottom" constant="319" id="C0O-ax-FvQ"/>
+                            <constraint firstItem="QNv-zv-fhp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="RWA-fN-Ibq"/>
+                            <constraint firstItem="QNv-zv-fhp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="a8F-EZ-A2q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QNv-zv-fhp" secondAttribute="trailing" constant="16" id="gSa-lY-dmv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Provinsi Table View Controller-->
+        <scene sceneID="L6z-3U-eJs">
+            <objects>
+                <tableViewController id="W6e-3h-uCt" customClass="ProvinsiTableViewController" customModule="ProvinsIndonesia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z0U-c6-scL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="3mX-3k-0Sj">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Provinsi Indonesia" id="0EG-Lc-3eK">
+                                    <barButtonItem key="leftBarButtonItem" systemItem="reply" id="Fko-jw-qgU">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Wcw-2c-cMZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" systemItem="add" id="iVQ-fZ-n19">
+                                        <connections>
+                                            <segue destination="jkY-NO-VIm" kind="show" id="LrK-qV-fFT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="provinsi" rowHeight="62" id="7WH-vp-E66" customClass="ProvinsiTableViewCell" customModule="ProvinsIndonesia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="62"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7WH-vp-E66" id="cbC-ux-IYn">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpL-jG-Fdq">
+                                            <rect key="frame" x="8" y="20" width="164" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="hpL-jG-Fdq" secondAttribute="height" multiplier="164:21" id="0Ef-s1-EBz"/>
+                                                <constraint firstAttribute="width" constant="164" id="8Vi-ZR-XES"/>
+                                                <constraint firstAttribute="height" constant="21" id="NAw-0j-ouv"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvL-Zh-5Nd">
+                                            <rect key="frame" x="180" y="20" width="178" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="178" id="Lgb-Ke-AtU"/>
+                                                <constraint firstAttribute="width" secondItem="kvL-Zh-5Nd" secondAttribute="height" multiplier="178:21" id="R4U-Xh-UCk"/>
+                                                <constraint firstAttribute="height" constant="21" id="dTJ-nd-JXk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.43044098980000001" green="0.43044098980000001" blue="0.43044098980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="kvL-Zh-5Nd" secondAttribute="bottom" constant="12.5" id="4WC-tg-3Ve"/>
+                                        <constraint firstItem="hpL-jG-Fdq" firstAttribute="top" secondItem="cbC-ux-IYn" secondAttribute="topMargin" constant="12" id="9nN-jr-Io8"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="kvL-Zh-5Nd" secondAttribute="trailing" constant="9" id="Kmf-8g-Rqb"/>
+                                        <constraint firstItem="kvL-Zh-5Nd" firstAttribute="leading" secondItem="hpL-jG-Fdq" secondAttribute="trailing" constant="8" id="MTf-x8-5Qu"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="hpL-jG-Fdq" secondAttribute="bottom" constant="12.5" id="OlC-7S-JYw"/>
+                                        <constraint firstItem="kvL-Zh-5Nd" firstAttribute="top" secondItem="cbC-ux-IYn" secondAttribute="topMargin" constant="12" id="XZH-PS-lcw"/>
+                                        <constraint firstItem="hpL-jG-Fdq" firstAttribute="leading" secondItem="cbC-ux-IYn" secondAttribute="leadingMargin" id="wKa-0w-cax"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gubernur" destination="kvL-Zh-5Nd" id="cjQ-Ld-blC"/>
+                                    <outlet property="nama" destination="hpL-jG-Fdq" id="Cex-5v-bfC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="W6e-3h-uCt" id="0IX-x7-EKv"/>
+                            <outlet property="delegate" destination="W6e-3h-uCt" id="0JB-gF-O4S"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="yw4-Ch-qcr" kind="show" identifier="passProvinsi" id="4yB-rJ-7gU"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SeF-cs-xnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845.60000000000002" y="133.5832083958021"/>
+        </scene>
+        <!--Input View Controller-->
+        <scene sceneID="kch-6G-Uah">
+            <objects>
+                <viewController id="jkY-NO-VIm" customClass="InputViewController" customModule="ProvinsIndonesia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cMP-P8-F3R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18F-6i-jAz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="INPUT PROVINSI" id="3kw-RB-u62">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="6fz-og-kSG">
+                                            <connections>
+                                                <segue destination="W6e-3h-uCt" kind="show" id="d0U-Go-MJP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama Provinsi" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgZ-Ht-u2Z">
+                                <rect key="frame" x="66" y="146" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gubernur" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FF9-RY-yfB">
+                                <rect key="frame" x="66" y="184" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tahun Berdiri" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r44-N1-1JJ">
+                                <rect key="frame" x="66" y="222" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ibukota" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3T-nc-lW0">
+                                <rect key="frame" x="66" y="260" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senjata Tradisional" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQ5-RQ-l3E">
+                                <rect key="frame" x="66" y="298" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk2-6d-gHM">
+                                <rect key="frame" x="102" y="401" width="171" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <state key="normal" title="SIMPAN">
+                                    <color key="titleColor" red="0.971046933" green="1" blue="0.99681129970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Simpan:" destination="jkY-NO-VIm" eventType="touchUpInside" id="gn4-9M-g5Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43044098980000001" green="0.43044098980000001" blue="0.43044098980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="r7m-CW-zs2"/>
+                    </view>
+                    <connections>
+                        <outlet property="etGubernur" destination="FF9-RY-yfB" id="zdA-kZ-dmW"/>
+                        <outlet property="etKota" destination="J3T-nc-lW0" id="ELH-4H-HWe"/>
+                        <outlet property="etNama" destination="dgZ-Ht-u2Z" id="Xhu-U1-lOo"/>
+                        <outlet property="etSenjata" destination="sQ5-RQ-l3E" id="PYo-9m-bgF"/>
+                        <outlet property="etTahun" destination="r44-N1-1JJ" id="Wd1-jS-M9G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWX-8L-8Ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="799.2503748125938"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="9OP-Lh-x8s">
+            <objects>
+                <viewController id="yw4-Ch-qcr" customClass="DetailViewController" customModule="ProvinsIndonesia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jzR-XU-gW6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTx-8I-574">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="DETAIL PROVINSI" id="Abt-tX-ZCg">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="Irc-Wt-r84">
+                                            <connections>
+                                                <segue destination="W6e-3h-uCt" kind="show" id="ZzK-NM-fI9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWr-ME-01X">
+                                <rect key="frame" x="16" y="137" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVu-cZ-9DC">
+                                <rect key="frame" x="16" y="213" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP9-X7-JAi">
+                                <rect key="frame" x="16" y="249" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybp-PA-qrf">
+                                <rect key="frame" x="16" y="286" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb1-3L-b8Y">
+                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1J-tm-BY0">
+                                <rect key="frame" x="16" y="174" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43044098980000001" green="0.43044098980000001" blue="0.43044098980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Rul-H8-Gbv"/>
+                    </view>
+                    <connections>
+                        <outlet property="gubernur" destination="gVu-cZ-9DC" id="s79-Kq-7fc"/>
+                        <outlet property="ibukota" destination="ybp-PA-qrf" id="yEF-Mw-K0X"/>
+                        <outlet property="id" destination="JWr-ME-01X" id="afQ-4S-s5y"/>
+                        <outlet property="nama" destination="a1J-tm-BY0" id="f2J-m6-AwY"/>
+                        <outlet property="senjata" destination="Xb1-3L-b8Y" id="ND1-n3-f0z"/>
+                        <outlet property="tahun" destination="JP9-X7-JAi" id="rpN-K3-zEi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HkR-sk-vLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.5999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="d0U-Go-MJP"/>
+    </inferredMetricsTieBreakers>
+</document>
